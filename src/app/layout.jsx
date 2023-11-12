@@ -16,6 +16,6 @@ export default function RootLayout({ children }) {
         <link rel="shortcut icon" href={Logo} type="image/x-icon" />
       </head>
       <body className={inter.className}>{children}</body>
-    </html>
+    </html> 
   )
 }
