@@ -34,6 +34,46 @@
   margin-top: 1.1rem;
 }
 
+.redeSociaisFooter ul{
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.redeSociaisFooter ul li {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: linear-gradient(#009246 0 0);
+  background-size: 200% .08em; 
+  background-position: 200% 100%;
+  background-repeat: no-repeat;
+  transition: background-size .3s, background-position .3s .3s;
+}
+
+.redeSociaisFooter ul li:hover {
+  transition: background-size .3s .3s, background-position .3s;
+  background-size: 200% 100%;
+  background-position: 100% 100%;
+
+}
+
+.redeSociaisFooter ul li:hover > i {
+  color: #fff;
+  transition: color 1500ms;
+}
+
+.redeSociaisFooter ul li i{
+ font-size: 3rem;
+ color: #009246;
+ 
+}
+
+
+
 @media (max-width: 700px) {
   .footer {
    
@@ -43,4 +83,6 @@
     width: 6rem;
     height: 6rem;
   }
+
+
 }

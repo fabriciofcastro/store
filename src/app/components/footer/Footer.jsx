@@ -31,11 +31,11 @@ function Footer() {
           <ul>
             <li>E-mail: sac@giornatatop.it</li>
           </ul>
-          <section className={Styles.redeSociais}>
+          <section className={Styles.redeSociaisFooter}>
             <ul>
-              <li><Link href="/dashboard/footer/termos/privacidade"><i className="ph ph-facebook-logo"></i></Link></li>
-              <li><Link href=""><i className="ph ph-instagram-logo"></i></Link></li>
-              <li><Link href=""><i className="ph ph-tiktok-logo"></i></Link></li>
+              <Link className={Styles.linkRedeSocial} href="https://www.facebook.com/topgiornata" target='_blank' rel="noreferrer"><li><i className="ph ph-facebook-logo"></i></li></Link>
+              <Link className={Styles.linkRedeSocial} href="https://www.instagram.com/giornatatop" target='_blank' rel="noreferrer"><li><i className="ph ph-instagram-logo"></i></li></Link>
+              <Link className={Styles.linkRedeSocial} href="https://www.tiktok.com/@giornatatop" target='_blank' rel="noreferrer"><li><i className="ph ph-tiktok-logo"></i></li></Link>
             </ul>
           </section>
         </section>
