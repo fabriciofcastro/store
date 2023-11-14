@@ -1,0 +1,6 @@
+.main {
+  width: clamp(58rem, 50%, 80rem);
+  margin: 15rem auto;
+  display: flex;
+  justify-content: center;
+}

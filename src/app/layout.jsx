@@ -2,30 +2,21 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/app/components/header/Header'
 import Footer from '@/app/components/footer/Footer'
-import Produtos from './components/produtos/produtos'
-import Styles from '@/app/app.module.css'
+import Head from '@/app/head'
 
 const inter = Inter( { subsets: ['latin'] } )
-
-
 
 export default function RootLayout ( { children } )
 {
   return (
     <html lang="it">
+      <Head >
+        
+      </Head>
       <body className={ inter.className }>
-       
-        <div className={ Styles.container }>
-          <Header />
-          
-          <main className={ Styles.main }>
-            <Produtos />
-          </main>
-
-          <Footer />
-        </div>
+        <Header />
         { children }
-
+        <Footer />
       </body>
     </html>
   )
