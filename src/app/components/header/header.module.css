@@ -1,0 +1,36 @@
+.header {
+  background-color: #009246;
+  height: 12rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  padding: 0 10rem 0;
+  color: #fff;
+  position: fixed;
+  z-index: 3;
+}
+
+.descricaoLogo h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+
+@media (max-width: 700px) {
+  .imagemLogo {
+    width: 6rem;
+    height: 6rem;
+  }
+  .descricaoLogo h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+
+  .descricaoLogo p {
+    font-size: .85rem;
+    font-weight: 600;
+  }
+}

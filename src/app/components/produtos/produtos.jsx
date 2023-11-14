@@ -1,24 +1,25 @@
-'user client'
+'use client'
 
 import Styles from "@/app/components/produtos/styles.module.css";
-import Data from "./intems.js";
+import data from "./intems";
 import Image from "next/image.js";
+import Link from "next/link";
 
 const Produtos = () =>
 {
   return (
     <div>
 
-      { Data.map( produto => (
-        <div className={ Styles.container } key={ produto.id }>
+      { data.map( produto => (
+        <div className={ Styles.card } key={ produto.id }>
 
           <div className={ Styles.imagem }>
-            <Image className={Styles.Image} src={ produto.imageURL } alt={ produto.name }  width={180} height={180}/>
+            <Image className={ Styles.Image } src={ produto.imageURL } alt={ produto.name } width={ 180 } height={ 180 } />
           </div>
           <div className={ Styles.descricaoProduto }>
             <h1>{ produto.name }</h1>
             <p>{ produto.description }</p>
-            <a className={Styles.button}href={ produto.link } target="_blank" rel="noreferrer">COMPRAR</a>
+            <Link className={ Styles.button } href={ produto.link } target="_blank" rel="noreferrer">ACQQUISTA</Link>
           </div>
 
         </div>
