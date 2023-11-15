@@ -3,21 +3,8 @@
   display: flex;
   justify-content: space-around;
   height: 200px;
-  width: 100%;
-  padding: 3rem 0;
-  
-}
+  padding: 3rem 0rem;
 
-.contato {
-  width: 100%;
-}
-
-.institucional {
-  width: 100%;
-}
-
-.descricaoFooter {
-  width: 100%;
 }
 
 .contato h1, 
@@ -27,8 +14,6 @@
   font-size: 2.2rem;
   color: #009246;
 }
-
-
 
 .institucional ul li {
   margin-top: 1.1rem;
@@ -64,7 +49,6 @@
 
 .redeSociaisFooter ul{
   display: flex;
-  justify-content: center;
   gap: 3rem;
 }
 
@@ -103,10 +87,12 @@
 
 
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
    .footer {
-    height: 160px;
-    width: 100%;
+    height: 36rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
   .logoFooter {
     width: 4rem;
@@ -114,14 +100,15 @@
   }
 
   .textoDescricao p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-top: 2rem;
   }
 
   .contato h1, 
   .institucional h1
   {
-   font-size: 1.5rem;
+   font-size: 1.8rem;
+   text-align: center;
   }
   .redeSociaisFooter ul li {
     width: 4rem;
@@ -135,16 +122,14 @@
   .institucional ul li i{
     font-size: 1.6rem;
   }
-  
-  .contato ul li {
-    margin-top: 1.1rem;
-  }
 
   .link {
     font-size: 1.2rem;
   }
   .contato ul li {
     font-size: 1.2rem;
+    margin-top: 1.1rem;
   }
+
 
 }
