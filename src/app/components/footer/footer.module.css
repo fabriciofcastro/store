@@ -2,11 +2,23 @@
   background-color: rgb(228, 228, 228);
   display: flex;
   justify-content: space-around;
-  height: 20rem 10rem 0;
+  height: 200px;
+  width: 100%;
   padding: 3rem 0;
-  position: relative;
+  
 }
 
+.contato {
+  width: 100%;
+}
+
+.institucional {
+  width: 100%;
+}
+
+.descricaoFooter {
+  width: 100%;
+}
 
 .contato h1, 
 .institucional h1
@@ -39,8 +51,15 @@
   color: #009246;
 }
 
+.contato ul li{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .contato ul li {
-  margin-top: 1.1rem;
+  margin: 1.1rem 0;
+
 }
 
 .redeSociaisFooter ul{
@@ -84,15 +103,48 @@
 
 
 
-@media (max-width: 580px) {
-  .footer {
-   width: 100%;
+@media (max-width: 450px) {
+   .footer {
+    height: 160px;
+    width: 100%;
   }
-
   .logoFooter {
-    width: 6rem;
-    height: 6rem;
+    width: 4rem;
+    height: 4rem;
   }
 
+  .textoDescricao p {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+  }
+
+  .contato h1, 
+  .institucional h1
+  {
+   font-size: 1.5rem;
+  }
+  .redeSociaisFooter ul li {
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .redeSociaisFooter ul li i{
+   font-size: 2rem;
+  }
+
+  .institucional ul li i{
+    font-size: 1.6rem;
+  }
+  
+  .contato ul li {
+    margin-top: 1.1rem;
+  }
+
+  .link {
+    font-size: 1.2rem;
+  }
+  .contato ul li {
+    font-size: 1.2rem;
+  }
 
 }

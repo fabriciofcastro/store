@@ -13,7 +13,7 @@ function Footer() {
      
           <section className={ Styles.textoDescricao }>
             <p>
-              Compra segura
+              acquisto sicuro
             </p>
           </section>
         </section>
@@ -21,15 +21,24 @@ function Footer() {
         <section className={Styles.institucional}>
           <h1>Istituzionale</h1>
           <ul>
-            <li><i class="ph ph-file-text"></i><Link className={Styles.link} href="/termos/privacidade" target='_blank' rel="noreferrer">Privacy Policy</Link></li>
-            <li><i class="ph ph-file-text"></i><Link className={Styles.link} href="" target='_blank' rel="noreferrer">Chi siamo</Link></li>
-            <li><i class="ph ph-file-text"></i><Link className={Styles.link} href="" target='_blank' rel="noreferrer">Contattaci</Link></li>
+            <li>
+              <i class="ph ph-file-text"></i>
+                <Link className={Styles.link} href="/termos/privacidade" target='_blank' rel="noreferrer">Privacy Policy</Link>
+            </li>
+            <li>
+              <i class="ph ph-file-text"></i>
+                <Link className={Styles.link} href="" target='_blank' rel="noreferrer">Chi siamo</Link>
+            </li>
+            <li>
+              <i class="ph ph-file-text"></i>
+                <Link className={Styles.link} href="" target='_blank' rel="noreferrer">Contattaci</Link>
+            </li>
           </ul>
         </section>
         <section className={Styles.contato}>
           <h1>Contattaci</h1>
           <ul>
-            <li><i class="ph ph-envelope"></i>E-mail: sac@giornatatop.it</li>
+            <li><i class="ph ph-envelope"></i>sac@giornatatop.it</li>
           </ul>
           <section className={Styles.redeSociaisFooter}>
             <ul>

@@ -83,12 +83,10 @@
   .descricaoProduto h1 {
     font-size: 2.5rem;
     font-weight: 900;
-
   }
 
   .descricaoProduto p {
     font-size: 1.3rem;
-
   }
 
   .button {
@@ -97,7 +95,39 @@
     font-size: 1.5rem;
     margin: 2.2rem 0 0;
   }
-
 }
 
 
+@media (max-width: 450px) {
+  .card {
+    width: 35rem;
+    height: 15rem;
+  }
+
+  .imagem {
+    height: 9rem;
+  }
+
+  .Image {
+    width: 8rem;
+    height: 9rem;
+  }
+
+  .descricaoProduto h1 {
+    font-size: 1.7rem;
+    font-weight: 900;
+  }
+  
+  .descricaoProduto p {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
+  
+  .button {
+    width: 11rem;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    margin: 1.2rem 0 0;
+  }
+
+}
