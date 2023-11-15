@@ -7,6 +7,7 @@ export default function Home() {
   return (
 
     <main className={ Styles.main }>
+     
       <Produtos />
     </main>
 

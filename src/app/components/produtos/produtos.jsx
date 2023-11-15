@@ -8,24 +8,32 @@ import Link from "next/link";
 const Produtos = () =>
 {
   return (
-    <div>
 
-      { data.map( produto => (
-        <div className={ Styles.card } key={ produto.id }>
+    <section className={ Styles.containerProdutos }>
 
-          <div className={ Styles.imagem }>
-            <Image className={ Styles.Image } src={ produto.imageURL } alt={ produto.name } width={ 180 } height={ 180 } />
+      <div className={ Styles.grid }>
+
+        { data.map( produto => (
+          <div className={ Styles.card } key={ produto.id }>
+
+            <div className={ Styles.boxImagem }>
+              <Image className={ Styles.Image } src={ produto.imageURL } alt={ produto.name } width={ 180 } height={ 180 } />
+            </div>
+            <div className={ Styles.descricaoProduto }>
+              <p>{ produto.description }</p>
+
+            </div>
+            <div className={ Styles.boxButton }>
+              <Link className={ Styles.button } href={ produto.link } target="_blank" rel="noreferrer">ACQQUISTA</Link>
+            </div>
+
           </div>
-          <div className={ Styles.descricaoProduto }>
-            <h1>{ produto.name }</h1>
-            <p>{ produto.description }</p>
-            <Link className={ Styles.button } href={ produto.link } target="_blank" rel="noreferrer">ACQQUISTA</Link>
-          </div>
+        ) ) }
 
-        </div>
-      ) ) }
+      </div>
+    </section>
 
-    </div>
+
 
   )
 }
