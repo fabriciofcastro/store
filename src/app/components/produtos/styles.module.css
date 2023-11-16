@@ -1,5 +1,6 @@
 .containerProdutos {
-  width: 95vw;
+ min-width: 95vw;
+ 
 }
 
 
@@ -9,12 +10,10 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 270px);
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));;
   grid-template-rows: auto;
-  row-gap: 2rem;
+  gap: 3rem;
   padding: 1rem;
-  justify-content: space-evenly;
-  
 }
 
 
@@ -46,9 +45,7 @@
 .boxImagem {
   width: 15rem;
   height: 12rem;
-  border: 1px solid;
 }
-
 
 .Image {
   width: 100%;
@@ -89,66 +86,7 @@
   box-shadow: none;
 }
 
-@media (max-width: 1280px) {
-  .grid {
-    grid-template-columns: repeat(5, 270px);
-  }
-}
+/*
+    Media Query
+*/
 
-@media (max-width: 1366px) {
-  .grid {
-    grid-template-columns: repeat(4, 270px);
-  }
-}
-
-@media (max-width: 1025px) {
-  .grid {
-    grid-template-columns: repeat(3, 280px);
-  }
-
-  .imagem {
-    width: 12rem;
-    height: 12rem;
-  }
-
-}
-
-
-@media (max-width: 800px) {
-  .grid {
-    grid-template-columns: repeat(2, 280px);
-  }
-}
-
-
-@media (max-width: 650px) {
-  .card {
-    width: 20rem;
-    height: 36rem;
-    border-radius: 3rem;
-    padding: 1rem;
-  }
-
-  .boxImagem {
-    height: 9rem;
-    width: 10rem;
-  }
-
-  .descricaoProduto h1 {
-    font-size: 1.6rem;
-    font-weight: 900;
-  }
-  
-  .descricaoProduto p {
-    font-size: 1.3rem;
-    line-height: 1.5rem;
-  }
-  
-  .button {
-    width: 11rem;
-    padding: .8rem 0;
-    font-size: 1.1rem;
-    margin: 1rem 0 0;
-  }
-
-}
