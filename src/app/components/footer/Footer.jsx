@@ -16,7 +16,7 @@ function Footer() {
               acquisto sicuro
             </p>
           </section>
-        </section>
+        </section> 
 
         <section className={Styles.institucional}>
           <h1>Istituzionale</h1>
@@ -35,6 +35,7 @@ function Footer() {
             </li>
           </ul>
         </section>
+        
         <section className={Styles.contato}>
           <h1>Contattaci</h1>
           <ul>
