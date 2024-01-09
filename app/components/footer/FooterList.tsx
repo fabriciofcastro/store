@@ -1,8 +1,9 @@
-import ContainerProps from "@/interfaces/ContainerProps"
+import ContainerProps from '@/interfaces/ContainerProps'
 
 export const FooterList: React.FC<ContainerProps> = ({ children }) => {
   return (
-    <div className='
+    <div
+      className="
     w-full
     sm:w-1/2
     md:w-1/4
@@ -11,8 +12,9 @@ export const FooterList: React.FC<ContainerProps> = ({ children }) => {
     flex
     flex-col
     gap-2
-    '>
-      { children }
+    "
+    >
+      {children}
     </div>
   )
 }

@@ -21,8 +21,8 @@ export interface ReviewsPros {
     createdAt: string
     updatedAt: string
     role: string
-    }
   }
+}
 
 export interface ItemsProductsProps {
   id: string
@@ -34,5 +34,4 @@ export interface ItemsProductsProps {
   inStock: boolean
   images: ImagesProductsProps[]
   reviews: ReviewsPros[]
-
 }

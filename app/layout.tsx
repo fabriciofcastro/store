@@ -21,13 +21,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={` ${poppins.className} text-slate-700` }>
-        <div className='flex flex-col min-h-screen'>
+      <body className={`${poppins.className} text-slate-700`}>
+        <div className="flex flex-col min-h-screen">
           <NavBar />
-          <main className='flex-grow' >{ children }</main>
+          <main className="flex-grow">{children}</main>
           <Footer />
         </div>
-
       </body>
     </html>
   )

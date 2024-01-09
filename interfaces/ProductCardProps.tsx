@@ -1,5 +1,5 @@
-import { ItemsProductsProps } from "./ItemsProductsProps";
+import { ItemsProductsProps } from './ItemsProductsProps'
 
 export interface ProductCardProps {
- data: ItemsProductsProps
+  data: ItemsProductsProps
 }

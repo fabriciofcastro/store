@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const formatPrice = (amount: number) => {
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
