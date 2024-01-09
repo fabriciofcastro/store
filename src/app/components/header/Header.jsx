@@ -9,7 +9,7 @@ function Header() {
           <Image className={Styles.imagemLogo}src={ Logo } alt="Logo " />
         </section>
         <section className={ Styles.descricaoLogo }>
-          <h2>Giornata Top</h2>
+          <h2>Giornata Top teste</h2>
           <p>INSEGNO PREZIOSI CONSIGLI TECNICI</p>
         </section>
       </header>

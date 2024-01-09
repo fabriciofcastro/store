@@ -1,7 +1,3 @@
-const imageLoder = ({src}) => {
-  
-}
-
 const Data = [ {
     id: "1",
     name: "nome do produto",
