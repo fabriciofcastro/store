@@ -1,5 +1,4 @@
-import ContainerProps from "@/interfaces/ContainerProps"
-import { ProductCardProps } from "@/interfaces/ProductCardProps"
+import ContainerProps from '@/interfaces/ContainerProps'
 
 const Container: React.FC<ContainerProps> = ({ children }) => {
   return (
@@ -10,7 +9,9 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
     md:px-2
     px-4
     "
-    >{ children } </div>
+    >
+      {children}
+    </div>
   )
 }
 
