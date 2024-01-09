@@ -1,20 +1,8 @@
 {
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "plugins": [
-    "react"
-  ],
-  "extends": [
+  "extends": [ 
     "next/core-web-vitals",
-    "@rocketseat/eslint-config/react"
-],
-  "rules": {
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off",
-    "prettier/prettier": "off"
-  }
-
+    "@rocketseat/eslint-config/react",
+], "rules": {
+      "eslint-config-prettier": "off"
+    }
 }
