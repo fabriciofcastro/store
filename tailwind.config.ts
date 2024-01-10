@@ -1,5 +1,3 @@
-import { colors } from '@mui/material'
-import { green } from '@mui/material/colors'
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -10,15 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        'green-italian': '#009246'
-      },
-
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'color-flag': 'green-italian'
+      },
+      theme: {
+        gridTemplateColumns: {
+          '25': 'repeat(auto-fill, minmax(15em, 1fr))',
+        },
       },
     },
   },

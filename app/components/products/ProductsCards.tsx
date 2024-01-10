@@ -16,7 +16,7 @@ export const ProductsCards: React.FC<ProductCardProps> = ({ data }) => {
     <div
       onClick={() => router.push(`/product/${data.id}`)}
       className="
-    col-span-1 
+      col-auto
     cursor-pointer 
     border-[1.2px] 
     border-slate-200 
