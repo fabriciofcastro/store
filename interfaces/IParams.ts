@@ -1,3 +1,3 @@
 export interface IParams {
-  productId?: string
+  productId?: string;
 }
