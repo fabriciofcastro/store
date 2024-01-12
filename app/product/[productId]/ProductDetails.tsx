@@ -1,6 +1,8 @@
 "use client";
 
+import Button from "@/app/components/Button";
 import SetColor from "@/app/components/products/SetColor";
+import SetQuantity from "@/app/components/products/SetQuantity";
 import { Rating } from "@mui/material";
 import { useCallback, useState } from "react";
 interface ProductDetailstProps {
@@ -49,6 +51,28 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
     [cartProduct.selectedImg],
   );
 
+  //btn Increment
+  const handleQtyIncrement = useCallback(() => {
+    if (cartProduct.quantity === 99 || cartProduct.quantity > 98) {
+      return;
+    }
+
+    setCartProduct((prev) => {
+      return { ...prev, quantity: ++prev.quantity };
+    });
+  }, [cartProduct]);
+
+  //Btn Decrement
+  const handleQtyDecrement = useCallback(() => {
+    if (cartProduct.quantity === 1 || cartProduct.quantity <= 2) {
+      return;
+    }
+
+    setCartProduct((prev) => {
+      return { ...prev, quantity: --prev.quantity };
+    });
+  }, [cartProduct]);
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
       <div>Image</div>
@@ -79,9 +103,17 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
           />
         </div>
         <Horizontal />
-        <div>quantidade</div>
+        <div>
+          <SetQuantity
+            cartProduct={cartProduct}
+            handleQtyIncrement={handleQtyIncrement}
+            handleQtyDecrement={handleQtyDecrement}
+          />
+        </div>
         <Horizontal />
-        <div>add carrinho</div>
+        <div className="flex justify-center mt-6">
+          <Button small outline label="COMPRAR" onClick={() => {}} />
+        </div>
       </div>
     </div>
   );
