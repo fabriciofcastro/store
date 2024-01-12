@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import Container from '../container'
+import Link from "next/link";
+import Container from "../container";
 
 const NavBar = () => {
   return (
@@ -31,14 +31,17 @@ const NavBar = () => {
             </Link>
             <div className="hidden md:block">Searche</div>
             <div className="flex items-center gap-8 md:gap-12">
-              <div>CartCount</div>
-              <div>UserMenu</div>
+              <div>Carrinho</div>
+              <div className="flex flex-col items-center">
+                <div>LOGIN</div>
+                <div>criar CADASTRO</div>
+              </div>
             </div>
           </div>
         </Container>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;
