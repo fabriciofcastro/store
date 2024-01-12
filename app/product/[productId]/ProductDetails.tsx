@@ -38,7 +38,7 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
     category: product.category,
     brand: product.brand,
     selectedImg: { ...product.images[0] },
-    quantity: 1,
+    quantity: 2,
     prince: product.price,
   });
 
@@ -86,7 +86,7 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
         <div className="text-justify">{product.description}</div>
         <Horizontal />
         <div>
-          <span className="font-semibold">CATEGORY: </span> {product.category}
+          <span className="font-semibold">Categoria: </span> {product.category}
         </div>
         <div className="font-semibold">
           <span>{product.brand}</span>
@@ -111,7 +111,7 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
           />
         </div>
         <Horizontal />
-        <div className="flex justify-center mt-6">
+        <div className="mt-6">
           <Button small outline label="COMPRAR" onClick={() => {}} />
         </div>
       </div>

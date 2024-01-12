@@ -31,7 +31,7 @@ const Button: React.FC<ButtonProps> = ({
         rounded-md
         hover:opacity-80
         transition
-        w-[600px]
+        w-[400px]
         shadow-lg
         flex
         justify-center
@@ -46,7 +46,7 @@ const Button: React.FC<ButtonProps> = ({
         ${custom ? custom : ""}
 `}
     >
-      {Icon && <Icon size={2} />}
+      {Icon && <Icon />}
       {label}
     </button>
   );
