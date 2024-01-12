@@ -42,6 +42,7 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
     prince: product.price,
   });
 
+  // btn Decrement
   const handleColorSelect = useCallback(
     (value: SelectedImgType) => {
       setCartProduct((prev) => {
@@ -51,7 +52,7 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
     [cartProduct.selectedImg],
   );
 
-  //btn Increment
+  // btn Increment
   const handleQtyIncrement = useCallback(() => {
     if (cartProduct.quantity === 99 || cartProduct.quantity > 98) {
       return;
@@ -62,7 +63,7 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
     });
   }, [cartProduct]);
 
-  //Btn Decrement
+  // Btn Decrement
   const handleQtyDecrement = useCallback(() => {
     if (cartProduct.quantity === 1 || cartProduct.quantity <= 2) {
       return;
@@ -77,7 +78,7 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
       <div>Image</div>
       <div className="flex flex-col gap-1 text-slate-500 text-sm">
-        <h2 className="text-3x1 font-medium text-slate-700"> {product.name}</h2>
+        <h2 className="text-3xl font-medium text-slate-700"> {product.name}</h2>
         <div className="flex items-center gap-2">
           <Rating value={2} />
           <div>{product.length} reviews</div>
@@ -91,8 +92,8 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
         <div className="font-semibold">
           <span>{product.brand}</span>
         </div>
-        <div className={product.isStock ? "text-teal-400" : "text-rose-400"}>
-          {product.inStoch ? "Disponivel" : "Indisponivel"}
+        <div className={product.inStock ? "text-teal-400" : "text-rose-400"}>
+          {product.inStock ? "Disponivel" : "Indisponivel"}
         </div>
         <Horizontal />
         <div>
