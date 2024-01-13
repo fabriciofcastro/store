@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "./components/nav/NavBar";
 import Footer from "./components/footer/Footer";
 import CartProvider from "@/provider/CartProvider";
+import Header from "./components/header/Header";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={`${poppins.className} text-slate-700`}>
         <CartProvider>
           <div className="flex flex-col min-h-screen">
+            <Header />
             <NavBar />
             <main className="flex-grow">{children}</main>
             <Footer />

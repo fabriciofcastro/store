@@ -5,38 +5,30 @@ const NavBar = () => {
   return (
     <div
       className="
-    stick
-    top-0
-    w-full
-    h-20
-    z-30
-    shadow-sm
-    bg-green-900
+      stick
+      top-0
+      w-full
+      z-30
+    bg-red-800
     text-white
+    
   "
     >
-      <div className="py-4 border-b-[1px]">
+      <div className="py-4 ">
         <Container>
-          <div
-            className="
-        flex
-        items-center
-        justify-between
-        gap-3
-        md:gap-0
-        "
-          >
+          <div className=" flex items-center justify-between gap-3 md:gap-0 w-full">
             <Link href="/" className="`${} font-bold text-2x1 `">
-              Giornatatop
+              DEPARTAMENTOS
             </Link>
-            <div className="hidden md:block">Searche</div>
-            <div className="flex items-center gap-8 md:gap-12">
-              <div>Carrinho</div>
-              <div className="flex flex-col items-center">
-                <div>LOGIN</div>
-                <div>criar CADASTRO</div>
-              </div>
-            </div>
+            <Link href="/" className="`${} font-bold text-2x1 `">
+              OFERTA DO DIA
+            </Link>
+            <Link href="/" className="`${} font-bold text-2x1 `">
+              LANÇAMENTOS
+            </Link>
+            <Link href="/" className="`${} font-bold text-2x1 `">
+              OPENBOX
+            </Link>
           </div>
         </Container>
       </div>

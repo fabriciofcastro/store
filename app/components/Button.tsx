@@ -38,7 +38,6 @@ const Button: React.FC<ButtonProps> = ({
         shadow-lg
         flex
         justify-center
-        py-3
         text-[18px]
         font-extrabold
         
