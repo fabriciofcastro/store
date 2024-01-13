@@ -24,22 +24,24 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
+      onClick={onClick}
       disabled={disable}
       className={`
-        disable: opacity-70
-        disabled: cursor-not-allowed
+        disable:opacity-70
+        disabled:cursor-not-allowed
         rounded-md
         hover:opacity-80
         transition
+        border-green-800
         w-[400px]
         shadow-lg
         flex
         justify-center
         py-3
-        text-lg
+        text-[18px]
         font-extrabold
-        gap-2
-        ${outline ? "bg-white" : "bg-green-600 "}
+        
+        ${outline ? "bg-white" : "bg-green-600"}
         ${outline ? "text-green-700" : "text-white"}
         ${small ? "text-sm font-light" : "text-md font-semibold"}
         ${small ? "py-1 px-2 border-[1px]" : "py-3 px-4 border-2 "}

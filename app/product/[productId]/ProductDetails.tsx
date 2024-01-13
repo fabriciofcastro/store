@@ -4,8 +4,10 @@ import Button from "@/app/components/Button";
 import ProductImage from "@/app/components/products/ProductImage";
 import SetColor from "@/app/components/products/SetColor";
 import SetQuantity from "@/app/components/products/SetQuantity";
+import { useCart } from "@/hooks/useCart";
 import { Rating } from "@mui/material";
 import { useCallback, useState } from "react";
+
 interface ProductDetailstProps {
   product: any;
 }
@@ -32,6 +34,7 @@ const Horizontal = () => {
 };
 
 export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
+  const { handleAddProductTotalCart, cartProducts } = useCart();
   const [cartProduct, setCartProduct] = useState<CartProductType>({
     id: product.id,
     name: product.name,
@@ -42,6 +45,8 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
     quantity: 2,
     prince: product.price,
   });
+
+  console.log(cartProduct);
 
   // btn Decrement
   const handleColorSelect = useCallback(
@@ -55,7 +60,7 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
 
   // btn Increment
   const handleQtyIncrement = useCallback(() => {
-    if (cartProduct.quantity === 99 || cartProduct.quantity > 98) {
+    if (cartProduct.quantity === 99) {
       return;
     }
 
@@ -66,7 +71,7 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
 
   // Btn Decrement
   const handleQtyDecrement = useCallback(() => {
-    if (cartProduct.quantity === 1 || cartProduct.quantity <= 2) {
+    if (cartProduct.quantity === 1) {
       return;
     }
 
@@ -118,8 +123,11 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
           />
         </div>
         <Horizontal />
-        <div className="mt-6">
-          <Button small outline label="COMPRAR" onClick={() => {}} />
+        <div className="max-w-">
+          <Button
+            label="COMPRAR"
+            onClick={() => handleAddProductTotalCart(cartProduct)}
+          />
         </div>
       </div>
     </div>

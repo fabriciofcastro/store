@@ -10,7 +10,10 @@ export default function Product({ params }: { params: IParams }) {
       <Container>
         <ProductDetails product={product} />
         <div className="flex flex-col mt-20 gap-4">
-          <div> Add lista avalição</div>
+          <div className="text-[28px] font-semibold text-center">
+            {" "}
+            Faça uma avaliação deste produto
+          </div>
           <ListRating product={product} />
         </div>
       </Container>
