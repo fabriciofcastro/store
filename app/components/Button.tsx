@@ -5,7 +5,7 @@ import { IconType } from "react-icons";
 
 interface ButtonProps {
   label: string;
-  disable?: boolean;
+  disabled?: boolean;
   outline?: boolean;
   small?: boolean;
   custom?: string;
@@ -15,7 +15,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({
   label,
-  disable,
+  disabled,
   outline,
   small,
   custom,
@@ -25,9 +25,9 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      disabled={disable}
+      disabled={disabled}
       className={`
-        disable:opacity-70
+        disabled:opacity-70
         disabled:cursor-not-allowed
         rounded-md
         hover:opacity-80

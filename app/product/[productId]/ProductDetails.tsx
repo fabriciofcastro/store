@@ -89,18 +89,23 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
       />
 
       <div className="flex flex-col gap-1 text-slate-500 text-sm">
-        <h2 className="text-3xl font-medium text-slate-700"> {product.name}</h2>
+        <h2 className="text-3xl font-medium text-slate-700 mb-2">
+          {" "}
+          {product.name}
+        </h2>
         <div className="flex items-center gap-2">
           <Rating value={2} />
-          <div>{product.length} reviews</div>
+          <div>{product.length} 2 reviews</div>
         </div>
         <Horizontal />
-        <div className="text-justify">{product.description}</div>
+        <div className="text-justify text-2xl">{product.description}</div>
         <Horizontal />
         <div>
-          <span className="font-semibold">Categoria: </span> {product.category}
+          <span className="font-semibold text-lg">Categoria: </span>
+          <span> {product.category} </span>
         </div>
-        <div className="font-semibold">
+        <div>
+          <span className="font-semibold text-lg ">Fabricante: </span>
           <span>{product.brand}</span>
         </div>
         <div className={product.inStock ? "text-teal-400" : "text-rose-400"}>

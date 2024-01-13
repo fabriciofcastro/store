@@ -11,8 +11,7 @@ export default function Product({ params }: { params: IParams }) {
         <ProductDetails product={product} />
         <div className="flex flex-col mt-20 gap-4">
           <div className="text-[28px] font-semibold text-center">
-            {" "}
-            Faça uma avaliação deste produto
+            <h1> Faça uma avaliação deste produto</h1>
           </div>
           <ListRating product={product} />
         </div>
