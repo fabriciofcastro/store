@@ -2,11 +2,11 @@
 
 import { CartContextProvider } from "@/hooks/useCart";
 
-interface CartProviderPropops {
-  children: React.ReactDOM;
+interface CartProviderProps {
+  children: React.ReactNode;
 }
 
-const CartProvider: React.FC<CartProviderPropops> = ({ children }) => {
+const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   return <CartContextProvider>{children}</CartContextProvider>;
 };
 

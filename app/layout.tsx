@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="pr-BR">
       <body className={`${poppins.className} text-slate-700`}>
         <CartProvider>
           <div className="flex flex-col min-h-screen">
