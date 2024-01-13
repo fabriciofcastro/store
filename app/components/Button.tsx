@@ -33,7 +33,8 @@ const Button: React.FC<ButtonProps> = ({
         hover:opacity-80
         transition
         border-green-800
-        w-[400px]
+        w-full
+        max-w-[400px]
         shadow-lg
         flex
         justify-center

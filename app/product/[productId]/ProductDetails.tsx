@@ -42,7 +42,7 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
     category: product.category,
     brand: product.brand,
     selectedImg: { ...product.images[0] },
-    quantity: 2,
+    quantity: 1,
     prince: product.price,
   });
 
@@ -123,7 +123,7 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
           />
         </div>
         <Horizontal />
-        <div className="max-w-">
+        <div className="w-full">
           <Button
             label="COMPRAR"
             onClick={() => handleAddProductTotalCart(cartProduct)}
