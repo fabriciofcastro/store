@@ -6,7 +6,7 @@ import SetColor from "@/app/components/products/SetColor";
 import SetQuantity from "@/app/components/products/SetQuantity";
 import { useCart } from "@/hooks/useCart";
 import { Rating } from "@mui/material";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 interface ProductDetailstProps {
   product: any;
@@ -35,6 +35,7 @@ const Horizontal = () => {
 
 export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
   const { handleAddProductTotalCart, cartProducts } = useCart();
+  const [isProductInCart, setIsProductInCart] = useState(() => false);
   const [cartProduct, setCartProduct] = useState<CartProductType>({
     id: product.id,
     name: product.name,
@@ -47,6 +48,20 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
   });
 
   console.log(cartProduct);
+
+  useEffect(() => {
+    setIsProductInCart(false);
+
+    if (cartProducts) {
+      const existingIndex = cartProducts.findIndex(
+        (item) => item.id === product.id,
+      );
+
+      if (existingIndex > -1) {
+        setIsProductInCart(true);
+      }
+    }
+  }, [cartProducts]);
 
   // btn Decrement
   const handleColorSelect = useCallback(
@@ -90,7 +105,6 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
 
       <div className="flex flex-col gap-1 text-slate-500 text-sm">
         <h2 className="text-3xl font-medium text-slate-700 mb-2">
-          {" "}
           {product.name}
         </h2>
         <div className="flex items-center gap-2">
@@ -98,7 +112,9 @@ export const ProductDetails: React.FC<ProductDetailstProps> = ({ product }) => {
           <div>{product.length} 2 reviews</div>
         </div>
         <Horizontal />
-        <div className="text-justify text-2xl">{product.description}</div>
+        <div className="text-justify text-[1.3rem] leading-6 ">
+          {product.description}
+        </div>
         <Horizontal />
         <div>
           <span className="font-semibold text-lg">Categoria: </span>

@@ -10,7 +10,7 @@ interface ListRatingProps {
 const ListRating: React.FC<ListRatingProps> = ({ product }) => {
   return (
     <div>
-      <Heading title={"Quem Avaliou do produto"} />
+      <Heading title={"Quem Avaliou o produto"} />
       <div className="text-sm mt-2">
         {product.reviews &&
           product.reviews.map((review: any) => {
